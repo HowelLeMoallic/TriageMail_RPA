@@ -11,7 +11,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1186,3375.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1234,3295.3333333333335</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="100">
@@ -142,17 +142,13 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="728.6666666666666,3310.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="728.6666666666666,3230.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:Dictionary(x:String, s:String[])" Default="[New Dictionary(Of String, String())]" Name="sendersDico" />
       <Variable x:TypeArguments="x:Boolean" Name="foundWord" />
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="listOfMailsClone" />
       <Variable x:TypeArguments="x:Boolean" Name="folderAutreExists" />
-      <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="listMails">
-        <Variable.Default>
-          <VisualBasicValue x:TypeArguments="scg:List(snm:MailMessage)" ExpressionText="New List(Of System.Net.Mail.MailMessage)" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="scg:List(snm:MailMessage)" Default="[New List(Of System.Net.Mail.MailMessage)]" Name="listMails" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -166,9 +162,9 @@
         <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
           <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
         </InArgument>
-        <InArgument x:TypeArguments="scg:List(snm:MailMessage)" x:Key="out_ListMails">
-          <VisualBasicValue x:TypeArguments="scg:List(snm:MailMessage)" ExpressionText="listMails" />
-        </InArgument>
+        <OutArgument x:TypeArguments="scg:List(snm:MailMessage)" x:Key="out_ListMails">
+          <VisualBasicReference x:TypeArguments="scg:List(snm:MailMessage)" ExpressionText="listMails" />
+        </OutArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Data_CloneList.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="666.6666666666666,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Workflows\Data\Data_CloneList.xaml">
@@ -183,7 +179,7 @@
     </ui:InvokeWorkflowFile>
     <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="666.6666666666666,354.6666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Data_ExtractSenders.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="356,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Workflows\Data\Data_ExtractSenders.xaml">
+        <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Data_ExtractSenders.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Workflows\Data\Data_ExtractSenders.xaml">
           <ui:InvokeWorkflowFile.Arguments>
             <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
               <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
@@ -214,31 +210,31 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
-    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each CATEGORIE in the dico" sap:VirtualizedContainerService.HintSize="666.6666666666666,1186.6666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[sendersDico.Keys]">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each CATEGORIE in the dico" sap:VirtualizedContainerService.HintSize="666.6666666666666,1138.6666666666667" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[sendersDico.Keys]">
       <ui:ForEach.Body>
         <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:String" Name="currentCategorie" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="632.6666666666666,996.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="632.6666666666666,964.6666666666666" sap2010:WorkflowViewState.IdRef="Sequence_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each sender in array" sap:VirtualizedContainerService.HintSize="590.6666666666666,909.3333333333334" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[sendersDico(currentCategorie)]">
+            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each sender in array" sap:VirtualizedContainerService.HintSize="590.6666666666666,877.3333333333334" sap2010:WorkflowViewState.IdRef="ForEach`1_3" Values="[sendersDico(currentCategorie)]">
               <ui:ForEach.Body>
                 <ActivityAction x:TypeArguments="x:String">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:String" Name="currentSender" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="556.6666666666666,719.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="556.6666666666666,703.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="for each mail in list" sap:VirtualizedContainerService.HintSize="514.6666666666666,632" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[listMails]">
+                    <ui:ForEach x:TypeArguments="snm:MailMessage" CurrentIndex="{x:Null}" DisplayName="for each mail in list" sap:VirtualizedContainerService.HintSize="514.6666666666666,616" sap2010:WorkflowViewState.IdRef="ForEach`1_4" Values="[listMails]">
                       <ui:ForEach.Body>
                         <ActivityAction x:TypeArguments="snm:MailMessage">
                           <ActivityAction.Argument>
@@ -254,13 +250,27 @@
                               <TryCatch.Try>
                                 <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Gmail_MoveMail.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Workflows\Gmail\Gmail_MoveMail.xaml">
                                   <ui:InvokeWorkflowFile.Arguments>
-                                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[in_Config]</InArgument>
-                                    <InArgument x:TypeArguments="snm:MailMessage" x:Key="in_CurrentMail">[currentMail]</InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="in_CurrentSender">[currentSender]</InArgument>
-                                    <InArgument x:TypeArguments="sd:DataTable" x:Key="io_dt_ExtractCategoriesFolder">[io_dt_ExtractCategoriesFolder]</InArgument>
-                                    <InArgument x:TypeArguments="x:Boolean" x:Key="out_FolderAutreExists">[folderAutreExists]</InArgument>
-                                    <InArgument x:TypeArguments="x:String" x:Key="io_CurrentCategorie">[currentCategorie]</InArgument>
-                                    <InArgument x:TypeArguments="scg:List(snm:MailMessage)" x:Key="io_ListOfMailsClone">[listOfMailsClone]</InArgument>
+                                    <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">
+                                      <VisualBasicValue x:TypeArguments="scg:Dictionary(x:String, x:Object)" ExpressionText="in_Config" />
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="snm:MailMessage" x:Key="in_CurrentMail">
+                                      <VisualBasicValue x:TypeArguments="snm:MailMessage" ExpressionText="currentMail" />
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_CurrentSender">
+                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="currentSender" />
+                                    </InArgument>
+                                    <OutArgument x:TypeArguments="x:Boolean" x:Key="out_FolderAutreExists">
+                                      <VisualBasicReference x:TypeArguments="x:Boolean" ExpressionText="folderAutreExists" />
+                                    </OutArgument>
+                                    <InOutArgument x:TypeArguments="scg:List(snm:MailMessage)" x:Key="io_ListOfMailsClone">
+                                      <VisualBasicReference x:TypeArguments="scg:List(snm:MailMessage)" ExpressionText="listOfMailsClone" />
+                                    </InOutArgument>
+                                    <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_ExtractCategoriesFolder">
+                                      <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="io_dt_ExtractCategoriesFolder" />
+                                    </InArgument>
+                                    <InArgument x:TypeArguments="x:String" x:Key="in_CurrentCategorie">
+                                      <VisualBasicValue x:TypeArguments="x:String" ExpressionText="currentCategorie" />
+                                    </InArgument>
                                   </ui:InvokeWorkflowFile.Arguments>
                                 </ui:InvokeWorkflowFile>
                               </TryCatch.Try>
@@ -305,7 +315,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ForEach>
-    <If Condition="[Not listOfMailsClone.Count.Equals(0)]" sap:VirtualizedContainerService.HintSize="666.6666666666666,917.3333333333334" sap2010:WorkflowViewState.IdRef="If_4">
+    <If Condition="[Not listOfMailsClone.Count.Equals(0)]" sap:VirtualizedContainerService.HintSize="666.6666666666666,885.3333333333334" sap2010:WorkflowViewState.IdRef="If_4">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
