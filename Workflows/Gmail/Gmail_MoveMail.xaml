@@ -20,7 +20,7 @@
   <this:Mail_MoveMail.in_CurrentCategorie>
     <InArgument x:TypeArguments="x:String" />
   </this:Mail_MoveMail.in_CurrentCategorie>
-  <sap:VirtualizedContainerService.HintSize>1234,2543.3333333333335</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1234,3342</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -138,7 +138,7 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Gmail_MoveMail" sap:VirtualizedContainerService.HintSize="744,2478.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_26">
+  <Sequence DisplayName="Gmail_MoveMail" sap:VirtualizedContainerService.HintSize="776,3277" sap2010:WorkflowViewState.IdRef="Sequence_26">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Boolean" Name="folderExists" />
       <Variable x:TypeArguments="sd:DataRow" Name="newRow" />
@@ -150,7 +150,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[in_CurrentMail.From.DisplayName.ToLower.Trim.Contains(in_CurrentSender.ToLower.Trim)]" sap:VirtualizedContainerService.HintSize="682,2368" sap2010:WorkflowViewState.IdRef="If_3">
+    <If Condition="[in_CurrentMail.From.DisplayName.ToLower.Trim.Contains(in_CurrentSender.ToLower.Trim)]" sap:VirtualizedContainerService.HintSize="714,3166" sap2010:WorkflowViewState.IdRef="If_3">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -158,13 +158,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="648,2216" sap2010:WorkflowViewState.IdRef="Sequence_10">
+        <Sequence sap:VirtualizedContainerService.HintSize="636,2890" sap2010:WorkflowViewState.IdRef="Sequence_10">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <Assign sap:VirtualizedContainerService.HintSize="606,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_6">
+          <Assign sap:VirtualizedContainerService.HintSize="574,61" sap2010:WorkflowViewState.IdRef="Assign_6">
             <Assign.To>
               <OutArgument x:TypeArguments="x:Boolean">[folderExists]</OutArgument>
             </Assign.To>
@@ -172,27 +172,28 @@
               <InArgument x:TypeArguments="x:Boolean">False</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_dt_ExtractCategoriesFolder]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="606,916.6666666666666" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[in_dt_ExtractCategoriesFolder]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="574,1432" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                 </ActivityAction.Argument>
-                <Sequence sap:VirtualizedContainerService.HintSize="572,800" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                <Sequence sap:VirtualizedContainerService.HintSize="540,1317" sap2010:WorkflowViewState.IdRef="Sequence_21">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[CurrentRow.Item(0).ToString.ToLower.Trim.Contains(in_CurrentCategorie.ToLower.Trim)]" sap:VirtualizedContainerService.HintSize="510,324.6666666666667" sap2010:WorkflowViewState.IdRef="If_5">
+                  <If Condition="[CurrentRow.Item(0).ToString.ToLower.Trim.Contains(in_CurrentCategorie.ToLower.Trim)]" sap:VirtualizedContainerService.HintSize="478,583" sap2010:WorkflowViewState.IdRef="If_5">
                     <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="476,172.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,304" sap2010:WorkflowViewState.IdRef="Sequence_16">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_1">
+                        <ui:LogMessage DisplayName="Log Message - Dossier existe" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Le dossier &quot;+CurrentRow.ToString+&quot; existe&quot;]" />
+                        <Assign sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_1">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Boolean">[folderExists]</OutArgument>
                           </Assign.To>
@@ -203,18 +204,25 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_17" />
-                    </If.Else>
-                  </If>
-                  <If Condition="[CurrentRow.Item(0).ToString.ToLower.Trim.Contains(&quot;autre&quot;)]" sap:VirtualizedContainerService.HintSize="510,324.6666666666667" sap2010:WorkflowViewState.IdRef="If_7">
-                    <If.Then>
-                      <Sequence sap:VirtualizedContainerService.HintSize="476,172.66666666666666" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,103" sap2010:WorkflowViewState.IdRef="Sequence_17">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_2">
+                      </Sequence>
+                    </If.Else>
+                  </If>
+                  <If Condition="[CurrentRow.Item(0).ToString.ToLower.Trim.Contains(&quot;autre&quot;)]" sap:VirtualizedContainerService.HintSize="478,583" sap2010:WorkflowViewState.IdRef="If_7">
+                    <If.Then>
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,304" sap2010:WorkflowViewState.IdRef="Sequence_24">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:LogMessage DisplayName="Log Message - Dossier existe" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Le dossier &quot;+CurrentRow.ToString+&quot; existe&quot;]" />
+                        <Assign sap:VirtualizedContainerService.HintSize="338,61" sap2010:WorkflowViewState.IdRef="Assign_2">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Boolean">[out_FolderAutreExists]</OutArgument>
                           </Assign.To>
@@ -225,7 +233,13 @@
                       </Sequence>
                     </If.Then>
                     <If.Else>
-                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_25" />
+                      <Sequence sap:VirtualizedContainerService.HintSize="400,103" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                      </Sequence>
                     </If.Else>
                   </If>
                 </Sequence>
@@ -238,28 +252,29 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:ForEachRow>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="606,1046.6666666666667" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="574,1206" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <TryCatch.Try>
-              <Sequence sap:VirtualizedContainerService.HintSize="450,807.3333333333334" sap2010:WorkflowViewState.IdRef="Sequence_27">
+              <Sequence sap:VirtualizedContainerService.HintSize="400,978" sap2010:WorkflowViewState.IdRef="Sequence_27">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Gmail_CreateFolder.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="388,115.33333333333333" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\Gmail\Gmail_CreateFolder.xaml">
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Gmail_CreateFolder.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="338,113" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflows\Gmail\Gmail_CreateFolder.xaml">
                   <ui:InvokeWorkflowFile.Arguments>
                     <InArgument x:TypeArguments="sd:DataTable" x:Key="in_dt_ExtractCategoriesFolder">[in_dt_ExtractCategoriesFolder]</InArgument>
                     <InArgument x:TypeArguments="x:Boolean" x:Key="in_FolderExists">[folderExists]</InArgument>
                     <InArgument x:TypeArguments="x:String" x:Key="in_CurrentCategorie">[in_CurrentCategorie]</InArgument>
                   </ui:InvokeWorkflowFile.Arguments>
                 </ui:InvokeWorkflowFile>
-                <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_Config(&quot;MailIdentification&quot;).ToString]" CacheStrategy="None" DisplayName="Get Credential for connexion to mail service" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="388,144.66666666666666" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[password]" Username="[username]" />
-                <ui:MoveIMAPMailMessageToFolder ClientName="{x:Null}" ClientVersion="{x:Null}" Password="{x:Null}" UseOAuth="{x:Null}" DisplayName="Move IMAP Mail Message" Email="[username]" EnableSSL="True" FromFolder="[in_Config(&quot;MailFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="388,88" sap2010:WorkflowViewState.IdRef="MoveIMAPMailMessageToFolder_1" IgnoreCRL="False" MailFolder="[in_CurrentCategorie]" MailMessage="[in_CurrentMail]" Port="[CInt(in_Config(&quot;MailPort&quot;).ToString)]" SecureConnection="Auto" SecurePassword="[password]" Server="[in_Config(&quot;MailServer&quot;).ToString]" />
-                <uasc:RemoveFromCollection x:TypeArguments="snm:MailMessage" Index="{x:Null}" Collection="[io_ListOfMailsClone]" DisplayName="Remove from collection" sap:VirtualizedContainerService.HintSize="388,228.66666666666666" sap2010:WorkflowViewState.IdRef="RemoveFromCollection`1_1" Item="[in_CurrentMail]" RemoveAllElements="False" />
+                <ui:GetRobotCredential TimeoutMS="{x:Null}" AssetName="[in_Config(&quot;MailIdentification&quot;).ToString]" CacheStrategy="None" DisplayName="Get Credential for connexion to mail service" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="338,170" sap2010:WorkflowViewState.IdRef="GetRobotCredential_1" Password="[password]" Username="[username]" />
+                <ui:MoveIMAPMailMessageToFolder ClientName="{x:Null}" ClientVersion="{x:Null}" Password="{x:Null}" UseOAuth="{x:Null}" DisplayName="Move IMAP Mail Message" Email="[username]" EnableSSL="True" FromFolder="[in_Config(&quot;MailFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="338,88" sap2010:WorkflowViewState.IdRef="MoveIMAPMailMessageToFolder_1" IgnoreCRL="False" MailFolder="[in_CurrentCategorie]" MailMessage="[in_CurrentMail]" Port="[CInt(in_Config(&quot;MailPort&quot;).ToString)]" SecureConnection="Auto" SecurePassword="[password]" Server="[in_Config(&quot;MailServer&quot;).ToString]" />
+                <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Le mail &quot;+in_CurrentMail.From.DisplayName+&quot; a été déplacé dans le dossier &quot;+in_CurrentCategorie]" />
+                <uasc:RemoveFromCollection x:TypeArguments="snm:MailMessage" Index="{x:Null}" Collection="[io_ListOfMailsClone]" DisplayName="Remove from collection" sap:VirtualizedContainerService.HintSize="338,244" sap2010:WorkflowViewState.IdRef="RemoveFromCollection`1_1" Item="[in_CurrentMail]" RemoveAllElements="False" />
               </Sequence>
             </TryCatch.Try>
             <TryCatch.Catches>
-              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="454.6666666666667,22" sap2010:WorkflowViewState.IdRef="Catch`1_2">
+              <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="404,21" sap2010:WorkflowViewState.IdRef="Catch`1_2">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -270,7 +285,7 @@
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
                   </ActivityAction.Argument>
-                  <Rethrow sap:VirtualizedContainerService.HintSize="334,25.333333333333332" sap2010:WorkflowViewState.IdRef="Rethrow_2" />
+                  <Rethrow sap:VirtualizedContainerService.HintSize="334,25" sap2010:WorkflowViewState.IdRef="Rethrow_2" />
                 </ActivityAction>
               </Catch>
             </TryCatch.Catches>

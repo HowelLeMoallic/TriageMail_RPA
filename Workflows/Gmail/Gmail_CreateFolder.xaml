@@ -7,7 +7,7 @@
   <this:Mail_CreateFolder.in_CurrentCategorie>
     <InArgument x:TypeArguments="x:String" />
   </this:Mail_CreateFolder.in_CurrentCategorie>
-  <sap:VirtualizedContainerService.HintSize>1224,2190</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1234,2529</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -124,7 +124,7 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Gmail_CreateFolder" sap:VirtualizedContainerService.HintSize="1234,2125" sap2010:WorkflowViewState.IdRef="Sequence_24">
+  <Sequence DisplayName="Gmail_CreateFolder" sap:VirtualizedContainerService.HintSize="1152,2464" sap2010:WorkflowViewState.IdRef="Sequence_24">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataRow" Name="newRow" />
     </Sequence.Variables>
@@ -133,7 +133,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[in_FolderExists = False]" sap:VirtualizedContainerService.HintSize="1172,2014" sap2010:WorkflowViewState.IdRef="If_6">
+    <If Condition="[in_FolderExists = False]" sap:VirtualizedContainerService.HintSize="1090,2353" sap2010:WorkflowViewState.IdRef="If_6">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -141,25 +141,25 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="1138,1832" sap2010:WorkflowViewState.IdRef="Sequence_22">
+        <Sequence sap:VirtualizedContainerService.HintSize="1012,2077" sap2010:WorkflowViewState.IdRef="Sequence_22">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Boîte de réception (1) - lemoallichowel@gmail.com - Gmail" sap:VirtualizedContainerService.HintSize="1096,1744" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="78dde9ae-7d35-4e78-8e7d-05f48d8d99d8" Version="V2">
+          <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Boîte de réception (1) - lemoallichowel@gmail.com - Gmail" sap:VirtualizedContainerService.HintSize="950,1966" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="78dde9ae-7d35-4e78-8e7d-05f48d8d99d8" Version="V2">
             <uix:NApplicationCard.Body>
               <ActivityAction x:TypeArguments="x:Object">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1062,1527" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="916,1749" sap2010:WorkflowViewState.IdRef="Sequence_18">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Libellés'" sap:VirtualizedContainerService.HintSize="1000,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="78dde9ae-7d35-4e78-8e7d-05f48d8d99d8" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Libellés'" sap:VirtualizedContainerService.HintSize="854,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="78dde9ae-7d35-4e78-8e7d-05f48d8d99d8" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://mail.google.com/mail/u/0/#inbox" DesignTimeRectangle="329, 807, 30, 30" DesignTimeScaleFactor="1.5" FriendlyName="'DIV'" FullSelectorArgument="&lt;webctrl tag='DIV' type='button' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='DIV' type='button' class='aAu arN' aaname='' /&gt;" Guid="186915ae-ac56-44a3-809b-579c7df24a16" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACIAAAAiCAYAAAA6RwvCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAXTSURBVFhHxZdpTFRXFMef1qZL2ppGVBgYmBmWWYBhl01kGRhQh1ErqCBaBnCpFGHUjAJqolZlMy5tjbjU9CtWrR+0aWIwWGoTSSgu1diI1lDbhooKFQW3f++5zJuMMFMcouUmv7zzXu7yv/eec+95go+XFBqlCp8sW47jx47hlytX0H7jBlp/bsPBQ4exKG8RVP4BUPjIoPD2gS972kPfCLnUGz6eXvzpr1BAq9FAl5SMooJC7K/fj9bWVjx69AjPnj3D4NLX1w/B3W0i7yA8NAxZc7Owc/ceHDj4Faqra2A0zkKgSg2qQwMMFkHQdxmbjLfEk9eTsffQYC1m6NOwZfNmNP3wI7p7evD8+XPrsEPLgwcPIERHRiAkKIgRjMjwCCQnJkGXnIKE+KlQBygh9ZBg8gQ3SCZNHoKXuwfkbDXUbEUjwsKRwlag0GRCbXU1Tp08iUuXLqPz7zt48uSJdcihhVaos7MTQnn5WhQVLcH87PmYmTEDCXHxiGKCQtisCC0TGKwJ5CsTpNZAGxiEMG0IIkJDER0ZBX1qGnIW5KC0tBR1tXU4+s1RtLFt/YfN8r9WQSwk8tatWxBudvyOpuZzOHL0OPbVH0DV9u1Ys3oNCguXcEz5BdxPsrPn8QFN+flYsXw5VpaUwGKxYNeuXfj2xAlcunwZvb29fPCXESCWx48f49q1axB6Hz7ky9fBBF1vb8fVK1fR1taG8+dbOOfO/YSmpiacPn0aZxrPoLm5GS0tLdz5Lly4wDr5Fbdv30Z3dzeePn1q7f7lS19fH+9HsL47LdQ5VabZktf39/e7NOPhCk3gbNPZ4YW87tLR0YGGhiOjL4S2ZUfdjtEX0tjYyBx/5egLaWhogGGmYfSEkMOT49fvq8cUdh4JN27+hpHyx59/8agiyHZUxxnXr7fj4sWL2FBZCTW7y4RDh7/GSDn13fc8pAmyHdVxRv3+g6iuqkLWnDn8zhKMmUZkGjJhNBjhql1RUYH79+9zyHalbSbzC7oeIsPCBoQEKHzhJ1ewq9sXrtp5Obno6urikD2Sfnxlco5gf6U7Inf+Aqd8tmkzPxkJsh3VEXHUt4iCCRpWiDhjR5AAusYJsrvu3BmEtS6zKW9xBE+sAtQOhLBl8mP40xIyBg9uzxAhDuqIiFtiD98apQby6IRBQkgEqxDg6weVnz9n8cI8p2zbuhU93T2cqm3b8PGixU6hnEbMcUSCWW6jjEuCz9x8CGEhoRChdDEqIhIxU6IRFxM7LJ8WF+PevXucsjIzkliG5ojkFB10LEJS0/Q2dOnpSDBkICivEF4lmyAkstRQhBqlUCNdKlLtYZ2kUUcEe9dRHcYq8ypb+Fosa5GengG9Ph1pbCCCbD19E79bofdUFsoxpkKoyjbAs/JzCJmzZkPEwJLlmSzOM6bPGOjEjvSM6XwgGkAUYjabbStCduK0RMSzVDMmOoZDdsLUBMSy1YtixzjltQS3k/WQr6iEZ/lOSDbuhUCVRGIY0WxbaHvERiKUWNOTtlDMZQtMBbh79y6HbMpp6deEfj8ISr4JspXM38j3OLHT4DfPBOnqKkjWfzEghBrawxuyRkrWYDB0CFEkkbcTC3NybFFBNjm8+I/jEBYMMnUwvKdnwWvFekgqdnMRXAj9k7gCdShGGR1UopDhDi1CwUJVpsuEtMhiE2ATIv6puYLYsStCFNpwyFKNkC5ZC09L7VAhjhq9Suj4lqkC4a0zQGpaBc91A875vwuR+yshiU2B++JSuG/40qEI4rUK8dFo4RGfivezl2F88SZMZOeFhxMxr14IiwxfFl0yVRDcp6Zh/EeFeHPZRrxtrsH4dbudrsqrF8J8gqJDEqfDB1lL8UbxFoxZWY0xZTV4a/UOTLKeG69VCJ0t0pAouOlm4d3cEoxbupGJqIJQWsMZZ67Dh+V7MHn90FUZsZAXQppth9wvAN7B4UzEbLyTW4qxxVttAkTGltXiPctOuDFfeVHIXvwLm0gDaETIEI4AAAAASUVORK5CYII=" InformativeScreenshot="c771ea3f52e81300490184892319351f.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Boîte de réception (1) - lemoallichowel@gmail.com - Gmail' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -170,7 +170,8 @@
                       </uix:TargetAnchorable>
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Entrez le'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="1000,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="78dde9ae-7d35-4e78-8e7d-05f48d8d99d8" Text="[in_CurrentCategorie]" Version="V3">
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="854,92" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Création du dossier &quot;+in_CurrentCategorie]" />
+                  <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Entrez le'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="854,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="78dde9ae-7d35-4e78-8e7d-05f48d8d99d8" Text="[in_CurrentCategorie]" Version="V3">
                     <uix:NTypeInto.Target>
                       <uix:TargetAnchorable BrowserURL="https://mail.google.com/mail/u/0/#inbox" CvType="InputBox" DesignTimeRectangle="629, 574, 635, 35" DesignTimeScaleFactor="1.5" ElementType="InputBox" FriendlyName="'INPUT :s7.na'" FullSelectorArgument="&lt;webctrl aria-labelledby=':s7.nt' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-labelledby=':s7.nt' tag='INPUT' type='' class='xx' aaname='Entrez le nom du nouveau libellé :' /&gt;" Guid="8a726b98-74f2-4923-b9a9-f17e0535bcd1" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAn8AAAAnCAYAAAB+DC5IAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAD3SURBVHhe7dZBDcMwAATBMjR/NI78qRonBOqdke53APYzAQDIEH8AACGP+BtjmJmZmdkh293i7+0AAMD/2vvuG3/CDwDgTL+dJ/4AAA4n/gAAQsQfAECI+AMACBF/AAAh4g8AIET8AQCEiD8AgBDxBwAQIv4AAELEHwBAiPgDAAgRfwAAIeIPACBE/AEAhIg/AIAQ8QcAECL+AABCxB8AQIj4AwAIEX8AACHiDwAgRPwBAISIPwCAEPEHABAi/gAAQsQfAECI+AMACBF/AAAh4g8AIOQ1/hYBCABwlr3vbvG3rIOZmZmZnbHdI/4AADiX+AMAyJjzAu9RQbQhOibeAAAAAElFTkSuQmCC" InformativeScreenshot="7444a854938c41e9a1577c099caf64e6.png" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Boîte de réception (1) - lemoallichowel@gmail.com - Gmail' /&gt;" SearchSteps="FuzzySelector, Image, CV" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
@@ -181,20 +182,20 @@
                       </uix:TargetAnchorable>
                     </uix:NTypeInto.Target>
                   </uix:NTypeInto>
-                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Créer'" sap:VirtualizedContainerService.HintSize="1000,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="78dde9ae-7d35-4e78-8e7d-05f48d8d99d8" Version="V3">
+                  <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Créer'" sap:VirtualizedContainerService.HintSize="854,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="78dde9ae-7d35-4e78-8e7d-05f48d8d99d8" Version="V3">
                     <uix:NClick.Target>
                       <uix:TargetAnchorable BrowserURL="https://mail.google.com/mail/u/0/#inbox" DesignTimeRectangle="1193, 720, 120, 54" DesignTimeScaleFactor="1.5" ElementType="Button" FriendlyName="'Créer'" FullSelectorArgument="&lt;webctrl name='ok' tag='BUTTON' aaname='Créer' /&gt;" FuzzySelectorArgument="&lt;webctrl name='ok' tag='BUTTON' type='' class='J-at1-auR' aaname='Créer' check:innerText='Créer' /&gt;" Guid="7089d86e-b897-4f19-87c3-9b0cf898ea23" ImageBase64="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" InformativeScreenshot="aa0c90ec8332464d48b425e22bd4f080.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Boîte de réception (1) - lemoallichowel@gmail.com - Gmail' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                     </uix:NClick.Target>
                   </uix:NClick>
-                  <uix:NCheckState DisplayName="Check App State 'ASSURANCE'" sap:VirtualizedContainerService.HintSize="1000,762" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="78dde9ae-7d35-4e78-8e7d-05f48d8d99d8" Version="V3">
+                  <uix:NCheckState DisplayName="Check App State current folder" sap:VirtualizedContainerService.HintSize="854,852" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="78dde9ae-7d35-4e78-8e7d-05f48d8d99d8" Version="V3">
                     <uix:NCheckState.IfExists>
-                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="496,545" sap2010:WorkflowViewState.IdRef="Sequence_25">
+                      <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="400,635" sap2010:WorkflowViewState.IdRef="Sequence_25">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_4">
+                        <Assign sap:VirtualizedContainerService.HintSize="338,62" sap2010:WorkflowViewState.IdRef="Assign_4">
                           <Assign.To>
                             <OutArgument x:TypeArguments="sd:DataRow">[newRow]</OutArgument>
                           </Assign.To>
@@ -202,7 +203,7 @@
                             <InArgument x:TypeArguments="sd:DataRow">[in_dt_ExtractCategoriesFolder.NewRow]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_5">
+                        <Assign sap:VirtualizedContainerService.HintSize="338,62" sap2010:WorkflowViewState.IdRef="Assign_5">
                           <Assign.To>
                             <OutArgument x:TypeArguments="x:Object">[newRow("FolderName")]</OutArgument>
                           </Assign.To>
@@ -210,23 +211,24 @@
                             <InArgument x:TypeArguments="x:Object">[in_CurrentCategorie]</InArgument>
                           </Assign.Value>
                         </Assign>
-                        <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRow]" DataTable="[in_dt_ExtractCategoriesFolder]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="434,186" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                        <ui:AddDataRow ArrayRow="{x:Null}" DataRow="[newRow]" DataTable="[in_dt_ExtractCategoriesFolder]" DisplayName="Add Data Row" sap:VirtualizedContainerService.HintSize="338,186" sap2010:WorkflowViewState.IdRef="AddDataRow_1" />
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="338,92" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Ajout du dossier créer dans la liste&quot;]" />
                       </Sequence>
                     </uix:NCheckState.IfExists>
                     <uix:NCheckState.IfNotExists>
-                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="450,203" sap2010:WorkflowViewState.IdRef="Sequence_26">
+                      <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="400,205" sap2010:WorkflowViewState.IdRef="Sequence_26">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Throw Exception="[New Exception(&quot;Une erreur est survenue lors de la création du dossier &quot;+in_CurrentCategorie)]" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
+                        <Throw Exception="[New Exception(&quot;Une erreur est survenue lors de la création du dossier &quot;+in_CurrentCategorie)]" sap:VirtualizedContainerService.HintSize="338,90" sap2010:WorkflowViewState.IdRef="Throw_1" />
                       </Sequence>
                     </uix:NCheckState.IfNotExists>
                     <uix:NCheckState.Target>
                       <uix:TargetAnchorable BrowserURL="https://mail.google.com/mail/u/0/#inbox" CvTextArgument="ASSURANCE" CvType="Text" DesignTimeRectangle="72, 578, 86, 18" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'ASSURANCE'" FullSelectorArgument="[string.Format(&quot;&lt;webctrl tag='A' aaname='{0}' /&gt;&quot;, in_CurrentCategorie)]" FuzzySelectorArgument="&lt;webctrl aria-label='ASSURANCE 1 message non lu contient un menu' tag='A' type='' class='J-Ke n0' aaname='ASSURANCE' check:innerText='ASSURANCE' /&gt;" Guid="3e584657-b02b-4f79-8295-a230de1304c1" ImageBase64="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" InformativeScreenshot="18428c6380fd159c8042979614c8ad66.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='* - Gmail' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                         <uix:TargetAnchorable.Anchors>
-                          <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                             <uix:Target CvTextArgument="Libelles" CvType="Text" DesignTimeRectangle="34, 539, 186, 20" ElementType="Text" FriendlyName="'Libellés'" FullSelectorArgument="&lt;webctrl aria-role='heading' parentid=':ne' tag='SPAN' aaname='Libellés' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='heading' parentid=':ne' tag='SPAN' type='' class='aAv' aaname='Libellés' check:innerText='Libellés' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAL4AAAAYCAYAAABEMUduAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAQVSURBVHhe7ZrbS1RRFMb9B/oPeu6h96CXIHqJniKCiCDqJYigoqCoHrpfDclKsDDLRO1ieS3zMtZ4HbW8m5qWWhrmLS1vo864Ot+yfThzZjszaSAc14YfM2vtNWuP8O1zvn3GqKij0SQIqw5tUhCcjjYpCE5HmxQEp6NNhuDg80JK8DTS5rtPOD6Z46aHVU20/UFGUO2/Yu+1PzWPkmta+NVeu+5yAsW6P9Cj6mbalZQdNC8IIbEGV4s8IUW86XYa9Y7+JoyCtm7OuT710IzPRxfzK4Pq/xV7rweeJl4Lr/baQ+lFNO6doY7Bn7T+WmLQvCCExBp87B8OK+Kspk4ampiiSwULNSsl/LTaVpqanaPzbyqC5gQhLNYgEuHbWSnhC8KysAaRCN/uw5VYrxR66LHhxxu/D1Jt7w+2TWtOxgZ8du25eD4f1PcNcF1GYwdtjU835yMRPnqiN9ZAD1iuvSmvzXmA88ezunaex1pYE2tba4RVjjWIRPh2cSKe8/vp5+Q0i1SN+fmFc4AS/7Z76dQz8ovnYFEmZ2a5ZsT4HA7Mut524cPLNxhCxue8cz6a+NsD/ZT12pGYSf2/JjiPecxhYBPIWUAwsQZLFT7G6JSXjrx0cQ6viCG6U7klZp3fUOOT2jZzM+AO4fPPU+mXXm1vu/CTqpu5h7vzm3kFx51m2linfWCEn/Tcr2hg0b9o+MTzWOttx1fedHuSczknCP9F+BBjfHl9QB0OnxBgdnMnbYl7Sn1j4zQwPknHMt+yNQF4jxzmUBNK+BBwS/8QX8Uv5FeYPfal5tHnoVH67Z3hOK6sjr9P98gYHTf6i8URtFiDpQpf9xnEyGMegoQwFxuRCF9tnsWGEj7szDvjjoA7CQY2H6zPzeKagO8nrHKswXKEf9mwHNY6xEr4sBhj016+Ch94mm9erRU7H2bxFT2U8NVvCDgTnMh2B/XY/Tgn4Oq+ISaZTueWsi2CFQr3dwmrDGuwHI9fbPho5d3xWt7Vx1fbxKomFiFED5uizgEAB9H8ti4686pU29sqfMR4kjPr81PMu/dmj423Uiin5TPnsC48f5lxZjhsWQdnA2sfQQgSPvwxPDOegljBoRE1iwkf1gLCxL8YVHZ/5xj+HeJGHbw3cvjxC+eBG65q3gzIYXPoetuFj4MyDsywNThDnM0rZ9+P76x+SUZvxLA3WAPgPTbMdVcV1whCkPAXGxAlanTCR4wnM7AUagwbAsczf9UbV+Pn9e1cqwYeg+YaV2t1pwgnfHCnpJb/VUEN3FU8xkZTjyphd/Jau7i3GvZ1BCFA+MsF4oOfV549VA18OSyQriYcEDc8PXrg0KurUesAtSkEwUSbFASno00KgtPRJgXB6WiTguB0tElBcDrapCA4mmj6A1vupMHw01xwAAAAAElFTkSuQmCC" SearchSteps="Selector" />
                           </scg:List>
                         </uix:TargetAnchorable.Anchors>
@@ -249,13 +251,7 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence sap:VirtualizedContainerService.HintSize="300,81.33333333333333" sap2010:WorkflowViewState.IdRef="Sequence_23">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-        </Sequence>
+        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,92" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Le dossier &quot;+in_CurrentCategorie+&quot; a déjà été créer&quot;]" />
       </If.Else>
     </If>
   </Sequence>
